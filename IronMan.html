@@ -7,10 +7,11 @@
   <body>
   <script type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
-    const xhr = new XMLHttpRequest();
-    const urk = 'https://be-i.net/test/IronMan.glb';
-    
-    xhr.open('GET', url);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://be-i.net/test/IronMan.glb');
+    xhr.withCredentials = true;
+    xhr.setRequestHeader('X-MyRequest', 'this-is-cors-test');
+    xhr.setRequestHeader('X-MyOption', 'my-option');
     xhr.addEventListener('load', onLoadFunc, false);
     xhr..send(null);
   </script>

@@ -7,7 +7,12 @@
   <body>
   <script type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    const xhr = new XMLHttpRequest();
+    const urk = 'https://be-i.net/test/IronMan.glb';
     
+    xhr.open('GET', url);
+    xhr.onreadystatechange = someHandler;
+    xhr..send();
   </script>
     <model-viewer  
     ar

@@ -11,8 +11,8 @@
     const urk = 'https://be-i.net/test/IronMan.glb';
     
     xhr.open('GET', url);
-    xhr.onreadystatechange = someHandler;
-    xhr..send();
+    xhr.addEventListener('load', onLoadFunc, false);
+    xhr..send(null);
   </script>
     <model-viewer  
     ar

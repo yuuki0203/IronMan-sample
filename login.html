@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!----CSS---->
+    <link rel="stylesheet" type="text/css" href="./login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row m-0">
+      <div class="login_bg col-md-6 col-12 ipad"></div>
+      <div class="cont col-md-6 col-12">
+        <div class="form sign-in text-center">
+          <div class="mb-2" style="font-size: 26px;">アプリ名を表示</div><br>
+            <label>
+              <span>ユーザーID または メールアドレス</span>
+              <input name="log" id="user-name" type="text" />
+            </label>
+            <br>
+            <label>
+              <span>パスワード</span>
+              <input name="pwd" id="user-password" type="password"/></label
+            ><br />
+            <!-- <p class="forgot-pass">パスワードをお忘れの方はコチラ</p> -->
+            <button class="submit loginbtn" id="login" type="submit" value="ログイン" onClick="location.href='./menu.html'"  />ログイン</button><br />
+            <p class="text-center "><a href="/recover.html">パスワードをお忘れの方はコチラ</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

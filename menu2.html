@@ -25,9 +25,14 @@
         </style>
     </head>
     <script lang="ts">
-        public callNativeFunc(){
-            alert('qr')
-        } 
+        import { Component, Vue } from "vue-property-decorator";
+        
+        @Component({})
+        export default class Home extends Vue{
+            public callNativeFunc(){
+                alert('qr')
+            }
+        }
     </script>
     <div class="mx-3">
       <div role="main" class="col-10 mx-auto mt-5">

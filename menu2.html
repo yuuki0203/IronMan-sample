@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <!----CSS---->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+          integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI="
+          crossorigin="anonymous"
+        />
+        <style>
+          .width_fit {
+            width:100% !important;
+          }
+          button {
+            margin-bottom: 30px;
+          }
+        </style>
+    </head>
+    <div class="mx-3">
+      <div role="main" class="col-10 mx-auto mt-5">
+        <div class="text-center " style="color: darkgreen;">
+          <div class="row menu_btn mt-3">
+            <div class="row menu_btn mt-3">
+              <div class="col-12 col-md-6">
+                <button class="btn btn-success btn-lg width_fit" id="member-exam" type="button" onClick="window.webkit.messageHandlers.callbackHandler.postMessage('qr'); alert('qr');">QR</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button class="btn btn-primary btn-lg width_fit" id="member-study" type="button">日本語</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button class="btn btn-warning btn-lg width_fit" id="member-study" type="button">数学</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button class="btn btn-danger btn-lg width_fit" id="member-exam" type="button">試験</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

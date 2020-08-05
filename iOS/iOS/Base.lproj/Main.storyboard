@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1n7-cq-shA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="AR_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平面をタップして表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX9-mu-tt8">
+                                <rect key="frame" x="120" y="68" width="174" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.coner.Radius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qK8-6N-SS3">
+                                <rect key="frame" x="34" y="799" width="35" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NWr-tK-87U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="centerX" secondItem="nX9-mu-tt8" secondAttribute="centerX" id="7bF-xo-5dy"/>
+                            <constraint firstItem="nX9-mu-tt8" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="24" id="HNt-jw-Z4N"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Msr-t0-vKz"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="Qdb-LR-2QP"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="qK8-6N-SS3" secondAttribute="bottom" constant="30" id="aRt-Gm-Tf2"/>
+                            <constraint firstItem="nX9-mu-tt8" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="eDQ-bX-KAa"/>
+                            <constraint firstItem="qK8-6N-SS3" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="34" id="fU0-8s-2R9"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="topMargin" constant="-44" id="tPx-n8-BMv"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qK8-6N-SS3" secondAttribute="trailing" symbolic="YES" id="tRq-sq-cuJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wio-ri-JWC" appends="YES" id="WYK-CC-lfS"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="nwF-LR-O3v"/>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wio-ri-JWC">
+                    <connections>
+                        <action selector="tap:" destination="BV1-FR-VrT" id="5A9-dP-z9q"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="81.026785714285708"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="G49-tz-vpd">
+            <objects>
+                <viewController id="fJF-vK-osS" customClass="GraphViewController" customModule="AR_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iMT-Uf-8NZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2Z-M5-oZm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-16-rYa">
+                                <rect key="frame" x="295" y="114" width="49" height="30"/>
+                                <state key="normal" title="Pointer"/>
+                                <connections>
+                                    <action selector="cupButtonTapped:" destination="fJF-vK-osS" eventType="touchUpInside" id="QoU-F2-w0E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-Zy-EOU">
+                                <rect key="frame" x="70" y="114" width="43" height="30"/>
+                                <state key="normal" title="Graph"/>
+                                <connections>
+                                    <action selector="wineButtonTapped:" destination="fJF-vK-osS" eventType="touchUpInside" id="scn-c6-vbE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-b7-RJZ">
+                                <rect key="frame" x="185" y="788" width="44.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-fH-2tf">
+                                <rect key="frame" x="43" y="822" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="returnButton:" destination="fJF-vK-osS" eventType="touchUpInside" id="MFO-RA-vMj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g2Z-M5-oZm" firstAttribute="centerX" secondItem="iMT-Uf-8NZ" secondAttribute="centerX" id="Cdd-gy-eYg"/>
+                            <constraint firstItem="qiY-b7-RJZ" firstAttribute="centerX" secondItem="iMT-Uf-8NZ" secondAttribute="centerX" id="Epb-G0-aQM"/>
+                            <constraint firstItem="QdJ-fH-2tf" firstAttribute="leading" secondItem="kt8-pr-ItS" secondAttribute="leading" constant="43" id="IM6-Q2-Urb"/>
+                            <constraint firstItem="kt8-pr-ItS" firstAttribute="bottom" secondItem="QdJ-fH-2tf" secondAttribute="bottom" constant="10" id="KGF-zO-UAk"/>
+                            <constraint firstItem="QdR-Zy-EOU" firstAttribute="top" secondItem="kt8-pr-ItS" secondAttribute="top" constant="70" id="UqV-tS-pgb"/>
+                            <constraint firstItem="vcJ-16-rYa" firstAttribute="top" secondItem="kt8-pr-ItS" secondAttribute="top" constant="70" id="dtd-pM-CB4"/>
+                            <constraint firstItem="QdR-Zy-EOU" firstAttribute="leading" secondItem="kt8-pr-ItS" secondAttribute="leading" constant="70" id="g6G-5w-y4U"/>
+                            <constraint firstItem="g2Z-M5-oZm" firstAttribute="centerY" secondItem="iMT-Uf-8NZ" secondAttribute="centerY" id="kR9-OG-mVM"/>
+                            <constraint firstItem="g2Z-M5-oZm" firstAttribute="leading" secondItem="kt8-pr-ItS" secondAttribute="leading" id="lTG-74-bz4"/>
+                            <constraint firstItem="kt8-pr-ItS" firstAttribute="trailing" secondItem="vcJ-16-rYa" secondAttribute="trailing" constant="70" id="t4B-c1-VV9"/>
+                            <constraint firstItem="kt8-pr-ItS" firstAttribute="bottom" secondItem="qiY-b7-RJZ" secondAttribute="bottom" constant="50" id="wzx-yl-DeQ"/>
+                            <constraint firstItem="g2Z-M5-oZm" firstAttribute="top" secondItem="iMT-Uf-8NZ" secondAttribute="topMargin" constant="-44" id="yis-nH-aCF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kt8-pr-ItS"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="qiY-b7-RJZ" id="yZr-wc-SWU"/>
+                        <outlet property="mainSceneView" destination="g2Z-M5-oZm" id="kms-9h-WdJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTU-Z9-sFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="787.5"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="b5O-zE-P4k">
+            <objects>
+                <viewController id="1n7-cq-shA" customClass="WebViewController" customModule="AR_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKd-dA-kvI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eqa-Lg-8Z8"/>
+                    </view>
+                    <connections>
+                        <segue destination="Lvv-3U-eko" kind="presentation" identifier="toFirst" modalPresentationStyle="fullScreen" id="M6c-Zk-Oku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ae-QP-dbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1458" y="80"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="YT9-MF-ysX">
+            <objects>
+                <viewController id="Lvv-3U-eko" customClass="SubViewController" customModule="AR_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gkC-m6-4Ct">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="label1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2R-dj-9ee">
+                                <rect key="frame" x="97" y="54" width="220" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text" base64-UTF8="YES">
+6KGo56S644GX44Gf44GE44Oi44OH44Or44GuUVLjgrPjg7zjg4njgpIR4oCo6YWN572u44GX44Gm44GP
+44Gg44GV44GEA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bk-8S-xtD">
+                                <rect key="frame" x="20" y="779" width="35" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="ButtonTapped:" destination="Lvv-3U-eko" eventType="touchUpInside" id="vGi-xp-SSW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r35-gh-ZxU">
+                                <rect key="frame" x="348" y="782" width="46" height="30"/>
+                                <state key="normal" title="グラフ"/>
+                                <connections>
+                                    <action selector="GraphTapped:" destination="Lvv-3U-eko" eventType="touchUpInside" id="Jq0-vY-q8A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dyx-R8-KS0" firstAttribute="bottom" secondItem="r35-gh-ZxU" secondAttribute="bottom" constant="50" id="0XU-DE-eiX"/>
+                            <constraint firstItem="dyx-R8-KS0" firstAttribute="bottom" secondItem="3Bk-8S-xtD" secondAttribute="bottom" constant="50" id="Ae0-qZ-kad"/>
+                            <constraint firstItem="3Bk-8S-xtD" firstAttribute="leading" secondItem="gkC-m6-4Ct" secondAttribute="leadingMargin" id="EVY-qP-S0n"/>
+                            <constraint firstItem="U2R-dj-9ee" firstAttribute="top" secondItem="dyx-R8-KS0" secondAttribute="top" constant="10" id="HQJ-wA-eCg"/>
+                            <constraint firstItem="r35-gh-ZxU" firstAttribute="trailing" secondItem="gkC-m6-4Ct" secondAttribute="trailingMargin" id="nHg-aV-pyM"/>
+                            <constraint firstItem="U2R-dj-9ee" firstAttribute="centerX" secondItem="gkC-m6-4Ct" secondAttribute="centerX" id="ntT-7Y-gvo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dyx-R8-KS0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wkD-Zq-rW4"/>
+                    <connections>
+                        <outlet property="Button" destination="3Bk-8S-xtD" id="kZO-vJ-5v2"/>
+                        <outlet property="Button2" destination="r35-gh-ZxU" id="yzC-yz-ujP"/>
+                        <outlet property="label1" destination="U2R-dj-9ee" id="nnJ-kz-5iK"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="VcV-pK-hMm"/>
+                        <segue destination="fJF-vK-osS" kind="presentation" identifier="toGraph" modalPresentationStyle="fullScreen" id="sMI-ua-XUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOC-pc-Gna" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="80"/>
+        </scene>
+    </scenes>
+</document>

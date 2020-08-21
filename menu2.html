@@ -38,7 +38,7 @@
                 }
             }
             function OnFujiClick(){
-                if(navigator.userAgent.indexof('iPhone') > 0){
+                if(navigator.userAgent.indexOf('iPhone') > 0){
                     window.webkit.messageHandlers.callbackHandler.postMessage('問題');
                 }else if(navigator.userAgent.indexOf('Android') > 0){
                     alert('問題');

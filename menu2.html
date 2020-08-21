@@ -36,7 +36,16 @@
                 }else if(navigator.userAgent.indexOf('Android') > 0){
                     alert('qr');
                 }
-            }    
+            }
+            function OnFujiClick(){
+                if(navigator.userAgent.indexof('iPhone') > 0){
+                    window.webkit.messageHandlers.callbackHandler.postMessage('問題');
+                }else if(navigator.userAgent.indexOf('Android') > 0){
+                    alert('問題');
+                }else{
+                    alert('問題');
+                }
+            }
         </script>    
     </head>
     <div class="mx-3">
@@ -49,7 +58,7 @@
               </div>
                 
               <div class="col-12 col-md-6">
-　　　　　　　　　 <button type="submit"><img src="富士山.png" height="100" width="150" alt="文法" />文法</button>
+　　　　　　　　　 <button type="submit" onClick="OnFujiClick();"><img src="富士山.png" height="100" width="150" alt="文法" />文法</button>
               </div>
                                                                                               
               <div class="col-12 col-md-6">

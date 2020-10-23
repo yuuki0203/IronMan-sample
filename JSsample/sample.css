@@ -1,0 +1,15 @@
+
+@charset "UTF-8";
+
+.C-image {
+  margin-left: 395px;
+  margin-top: 140px;
+  z-index: 1;
+}
+.J-image {
+  z-index: 0;
+  position: absolute;
+    top: 140px;
+    left: 395px;
+  opacity: 0;
+}

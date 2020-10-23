@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <!----CSS---->
+	<link rel="stylesheet" type="text/css" href="./sample.css">
+        <style>
+
+        </style>
+        <script>
+		window.onscroll = function(){  
+			var scrollTop = window.pageYOffset;  //スクロール量を代入する
+
+			if (scrollTop == 0 ) {   //最上部に戻ってきた時
+				$(".C-image").css('opacity', '1')
+  				$('.C-image').css('transition', '0.5s')
+
+  				$(".J-image").css('opacity', '0')
+  				$('.J-image').css('transition', '0.5s')
+			}
+			if (scrollTop > 5 ) {   //１０pxスクロールした時
+  				$(".C-image").css('opacity', '0')
+  				$('.C-image').css('transition', '0.5s')
+
+  				$(".J-image").css('opacity', '1')
+  				$('.J-image').css('transition', '0.5s')
+			}
+		}
+        </script>    
+    </head>
+    <div class="image-man">
+	<img src="toilet_paper.png" class="C-image" width= 39%>
+	<img src="mail.png" class="J-image" width= 39%>
+    </div>
+  </body>
+</html>

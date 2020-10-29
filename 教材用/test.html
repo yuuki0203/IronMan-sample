@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>スライドサンプル２</title>
+    <style>
+        /**
+ * 最大幅の指定と中央寄せ
+ */
+        body {
+            background-color: lightskyblue;
+        }
+        .container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            max-height: 850px;
+            background-color:#fff;
+        }
+        /**
+ * swiper.js
+ */
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+        }
+        .swiper-container h1{
+            color:darkcyan;
+            background-color: #fff;
+        }
+        .swiper-container h2{
+            color: darkcyan;
+            background-color: #fff;
+            size: 2ex;
+        }
+        .sub-container {
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            fill: #fff;
+            stroke: none;
+            stroke-width: 0;
+            z-index: 10000;
+            width: 20px;
+            margin-top: -18px;
+            background-image: none;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #fff;
+        }
+
+        @media (min-width: 768px) {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 27px;
+                margin-top: -22px;
+            }
+        }
+
+        /**
+ * mainvisual
+ */
+        .mainvisual {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary p-2">
+    <div class="mainvisual p-2 shadow-sm">
+        <div class="mainvisual-inner container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper my-5">
+
+                    <div class="swiper-slide">
+                        <h1>手紙</h1>
+                        <div class="sub-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2>中文</h2>
+                                    <img src="./Toiletpaper.png" class="img-fluid">
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>日文</h2>
+                                    <img src="./fadeMail.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"> 
+                        <h1>可憐</h1>                       
+                        <div class="sub-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2>中文</h2>
+                                     <img src="./cry_woman.png" class="img-fluid">
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>日文</h2>
+                                    <img src="./karen.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h1>外人</h1>                        
+                        <div class="sub-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2>中文</h2>
+                                    <img src="./daretanin.png" class="img-fluid">
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>日文</h2>
+                                    <img src="./gaikokusan.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- .swiper-wrapper -->
+
+                <div class="swiper-pagination"></div>
+            </div><!-- .swiper-container -->
+        </div><!-- .mainvisual-inner -->
+    </div><!-- .mainvisual -->
+    <script>
+        /**
+         * swiper.js の初期化処理
+         */
+        window.addEventListener('load', function () {
+            var swiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                loop: true,
+                freemode: true,
+                speed: 200,
+                // autoplay: 2000
+            });
+            var subswiper = new Swiper('.sub-container', {
+                effect: 'fade',
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 2,
+                speed: 200,
+                // autoplay: 2000
+            });
+        }, false);
+    </script>
+</body>
+
+</html>

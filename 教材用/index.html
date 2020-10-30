@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <title>動画テスト</title>
+    </head>
+    <body>
+        <video src="./c57593ae961e8a9c01b25e34d44da71e.mp4" id="video" controls>
+            <p>ご使用のブラウザでは動画再生に対応していません</p>
+        </video>
+        <script>
+            window.onload = function(){
+                setCurrentTime( 20 );
+            }
+            function setCurrentTime( $currentTime ){
+                var $elementReference = document.getElementById("video");
+                $elementReference.currentTime = $currentTime;
+            }
+        </script>
+    </body>

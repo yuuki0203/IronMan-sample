@@ -9,8 +9,8 @@ function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player(
          'sample', // 埋め込む場所の指定
           {
-            width: 640, // プレーヤーの幅
-            height: 390, // プレーヤーの高さ
+            width: 320, // プレーヤーの幅
+            height: 195, // プレーヤーの高さ
             videoId: 'bHQqvYy5KYo', // YouTubeのID
             playerVars:{
                 start: 600

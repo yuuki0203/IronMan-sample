@@ -32,7 +32,7 @@
         // 現在の値を埋め込む関数
         const setCurrentValue = (val) => {
             currentValueElem.innerText = val;
-            img.src = "level" + currentValueElem + ".png";
+            img.src = "level" + currentValueElem.innerText + ".png";
         }
 
         // inputイベント時に値をセットする関数

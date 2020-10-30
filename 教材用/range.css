@@ -4,7 +4,7 @@ input[type="range"] {
     cursor: pointer; /* カーソルを分かりやすく */
     outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
     height: 14px; /* バーの高さ */
-    width: 30%; /* バーの幅 */
+    width: 50%; /* バーの幅 */
     background: #8acdff; /* バーの背景色 */
     border-radius: 10px; /* バーの両端の丸み */
     border: solid 3px #dff1ff; /* バー周囲の線 */

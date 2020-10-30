@@ -32,11 +32,6 @@
         // 現在の値を埋め込む関数
         const setCurrentValue = (val) => {
             currentValueElem.innerText = val;
-        }
-
-        // inputイベント時に値をセットする関数
-        const rangeOnChange = (e) => {
-            setCurrentValue(e.target.value);
             idx = currentValueElem
             if (idx == 1 || idx == 2){
                 img.src = "level0.png"
@@ -50,6 +45,11 @@
             else{
                 img.src = "level3.png"
             }
+        }
+
+        // inputイベント時に値をセットする関数
+        const rangeOnChange = (e) => {
+            setCurrentValue(e.target.value);
         }
         window.onload = () => {
             // 変更に合わせてイベントを発火する

@@ -11,16 +11,24 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>レンジスライダーテスト</title>
     <style>
+        body{
+            background-color: darkgreen;
+        }
+        p{
+            color: #ffffff;
+            font-size: 3ex;
+        }
     </style>
 </head>
 
-<body>
+<body class="p-2">
     <div>  
         <img id="image_place" src="level0.png"/>
     </div>
     <div>
         <input type="range" id="example" min="0" max="3" step="1" value="0">
-        <p>現在の値は<span id="current-value"></span>です</p>
+        <p>現在の辛さレベルは<span id="current-value"></span>です</p>
+        <p><span id="level-value"></p>
     </div>
 
     <script>
@@ -33,10 +41,23 @@
 
         // 埋め込む先の要素
         const currentValueElem = document.getElementById('current-value');
+        const levelvalue = document.getElementById('level-value')
 
         // 現在の値を埋め込む関数
         const setCurrentValue = (val) => {
             currentValueElem.innerText = val;
+            if (val == "0"){
+                levelvalue.innerText = "全然辛くありません"
+            }
+            else if(val == "1"){
+                levelvalue.innerText = "あまり辛くありません"
+            }
+            else if(val == "2"){
+                levelvalue.innerText = "少し/ちょっと辛いです"
+            }
+            else if(val == "3"){
+                levelvalue.innerText = "とても/たいへん辛いです"
+            }
             img.src = "level" + currentValueElem.innerText + ".png";
         }
 

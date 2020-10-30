@@ -56,7 +56,7 @@
         }
         window.onload = () => {
             // 変更に合わせてイベントを発火する
-            inputElem.addEventListener('input', rangeOnChange, changeImage);
+            inputElem.addEventListener('input', changeImage);
 
             // ページ読み込み時の値をセット
             setCurrentValue(inputElem.value);

@@ -3,7 +3,7 @@ input[type="range"] {
     appearance: none;
     cursor: pointer; /* カーソルを分かりやすく */
     outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
-    height: 7px; /* バーの高さ */
+    height: 14px; /* バーの高さ */
     width: 50%; /* バーの幅 */
     background: #8acdff; /* バーの背景色 */
     border-radius: 10px; /* バーの両端の丸み */

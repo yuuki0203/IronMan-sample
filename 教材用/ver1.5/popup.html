@@ -130,7 +130,7 @@
             /*$(".video_display").on(function(event){
             });*/
             $(".video_display").on('click touchend', function(event) {
-                if ($(event.target).closest('#target').length) {
+                if (!$(event.target).closest('#target').length) {
                     menu1.show(event, this);
                 }
             });

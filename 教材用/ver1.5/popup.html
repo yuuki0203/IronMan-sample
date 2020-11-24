@@ -131,9 +131,6 @@
             });*/
             $(".video_display").on('click touchend', function(event) {
                 if (!$(event.target).closest('#target').length) {
-                    event.stopPropagation();
-                }
-                else{
                     menu1.show(event, this);
                 }
             });

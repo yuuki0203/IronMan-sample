@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://ri.jwlc.jp/page/dialog.html -->
+<html lang="jp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./日本語教材アプリ｜応用文_files/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./日本語教材アプリ｜応用文_files/style.css">
+    <title>日本語教材アプリ｜応用文</title>
+</head>
+<body>
+    <div class="bg_pattern"></div>
+    <div class="mx-5 mt-3">
+        <div class="d-block d-sm-flex justify-content-between text-center">
+            <h4>第一課　応用文</h4>
+            <button type="button" class="btn btn-info video_all_play"><span class="text-danger mr-2">▶</span>ALL</button>
+        </div>
+    </div>
+    <div class="container page_area dialog_area">
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>加藤：</span>
+                <span class="media-body">今、太田さんから電話があったんだけど、まだ企画案が届いてないそうだよ。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>李　：</span>
+                <span class="media-body">変ですね。森さんがおととい送ったはずですが。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>李　：</span>
+                <span class="media-body">森さん、お疲れ様です。<br>まだ企画案が届いていないそうなんですよ。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">ええ？おかしいな。そんなはずはないですよ。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>李　：</span>
+                <span class="media-body">そうですよね、おととい送ったんですものね。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">いえ、自分で届けたんです。<br>西長安街の方へ行く用事があったので。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>李　：</span>
+                <span class="media-body">じゃあ、太田さんに直接渡したんですか。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">いいえ、太田さんは外出中でしたから、会社の人に預けてきました。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>太田：</span>
+                <span class="media-body">すみません、企画案、届いていました。<br>同僚が預かったままだったんです。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">そうだったんですか。よかったです。</span>
+            </div>
+        </a>
+    </div>
+    <!-- video -->
+    <div class="play_area d-none">
+        <div class="text-right">
+            <button type="button" class="btn btn-dark rounded-0 video_hide_btn mr-1 mt-1">×</button>
+        </div>
+        <div class="video_area">
+            <video controls="" autoplay="">
+                <source src="/ui_control/video/read.mp4" type="video/mp4">
+                <source src="/ui_control/video/read.mp4" type="video/ogg">
+                Your browser does not support HTML video.
+            </video>
+        </div>
+    </div>
+    <!-- back btn -->
+    <div class="back_btn text-center mb-5">
+        <a href="http://ri.jwlc.jp/page/main.html" class="btn btn-outline-primary">戻る</a>
+    </div>
+
+    <script src="./日本語教材アプリ｜応用文_files/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./日本語教材アプリ｜応用文_files/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="./日本語教材アプリ｜応用文_files/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <!-- 画面JS -->
+    <script>
+        var play = $('.play_area');
+        play.addClass('d-none')
+        $('.video_display').click(function(){
+            if (play.hasClass('d-none')){
+                play.removeClass('d-none');
+            }
+        })
+        $('.video_all_play').click(function(){
+            if (play.hasClass('d-none')){
+                play.removeClass('d-none');
+            }
+        })
+        $('.video_hide_btn').click(function(){
+            play.addClass('d-none');
+        })
+    </script>
+
+</body></html>

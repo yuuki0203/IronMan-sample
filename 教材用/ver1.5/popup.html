@@ -98,12 +98,6 @@
         <a href="http://ri.jwlc.jp/page/main.html" class="btn btn-outline-primary">戻る</a>
     </div>
 
-    <div id="pMENU" style="position:absolute;top:12px;left:0px;visibility:hidden;background-color:yellow;width:100px;">
-        <a href="http://www.yahoo.co.jp/"   >Yahoo</a><br>
-        <a href="http://www.infoseek.co.jp/">infoseek</a><br>
-        <a href="http://www.lycos.co.jp/"   >lycos</a><br>
-    </div>
-
     <script src="./jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="./bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
@@ -133,12 +127,12 @@
                     "action" : function(){ alert("ふが！"); } 
                 }
             ]);
-            /*$(".video_display").on(function(event){
+            $(".video_display").on(function(event){
                 menu1.show(event, this);
-            });*/
+            });
             $(".video_display").on('click touchend', function(event) {
                 if (!$(event.target).closest('#target').length) {
-                    menu1.show(event, this);
+                    event.stopPropagation();
                 }
             });
         });

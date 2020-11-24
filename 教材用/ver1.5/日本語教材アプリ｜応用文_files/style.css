@@ -1,0 +1,118 @@
+body {
+    background-color: rgba(246, 197, 85, .9);
+}
+
+/* .bg_pattern {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/texture.png);
+    -webkit-transition: background-color 2s ease-in;
+} */
+
+/* ログイン */
+.login_area {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.login_area h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.form_area {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form_area input {
+    max-width: 500px;
+    font-size: 15px!important;
+    padding: 10px!important;
+    margin-bottom: 20px;
+}
+.form_area .login_btn {
+    width: 150px!important;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.form_area a.small {
+    margin-top: 10px;
+    font-size: 12px;
+}
+/* メイン */
+.list_info a{
+    display: block;
+    margin-left: 20px;
+}
+
+/* .main_list_title:hover {
+    cursor: pointer;
+    color: cornflowerblue;
+} */
+
+/* ======================
+ 応用文
+====================== */
+.page_area {
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 3px;
+    max-width: 450px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dialog_area h4 {
+    font-size: 18px;
+}
+
+.dialog_area a{
+    color: #444;
+    font-size: 14px;
+}
+
+.dialog_area a:hover {
+    color: #00897B;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.play_area {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ececec;
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.video_area {
+    padding: 20px;
+}
+.video_area video {
+    width: 100%;
+}
+
+.back_btn a {
+    min-width: 100px;
+}
+/* ======================
+ オリジナル
+====================== */
+#image_place {
+    height: 300px;
+}
+/* ======================
+ コラム
+====================== */
+.lang_change img {
+    height: 300px;
+    margin: 0 auto;
+}
+.lang_change {
+    text-align: center;
+}

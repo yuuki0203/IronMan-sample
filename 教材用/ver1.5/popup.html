@@ -113,9 +113,9 @@
     <script>
         var play = $('.play_area');
         play.addClass('d-none')
-        $('.video_display').click(function(){
+        /*$('.video_display').click(function(){
             popupmenu;
-        })
+        })*/
         $('.video_all_play').click(function(){
             if (play.hasClass('d-none')){
                 play.removeClass('d-none');
@@ -124,7 +124,7 @@
         $('.video_hide_btn').click(function(){
             play.addClass('d-none');
         })
-       /*$(document).ready(function(){
+       $(document).ready(function(){
             var menu1 = new PopupMenu( $, [
                 { "title" : "hoge",
                     "action" : function(){ alert("hoge!"); } 
@@ -133,17 +133,14 @@
                     "action" : function(){ alert("ふが！"); } 
                 }
             ]);
-            $(".video_display").click(function(event){
+            $(".video_display").on(function(event){
                 menu1.show(event, this);
             });
-        });*/
-        flag = false;
-        function popupmenu()
-        {
-	        pMENU.style.left = event.x;
-	        pMENU.style.top  = event.y;
-	        if (flag) pMENU.style.visibility = "hidden"; else pMENU.style.visibility = "visible";
-	        flag = !flag;
-        }
+            $(document).on('click touchend', function(event) {
+                if (!$(event.target).closest('#target').length) {
+                    event.stopPropagation();
+                }
+            });
+        });
     </script>
 </body></html>

@@ -130,7 +130,7 @@
             $(".video_display").on(function(event){
                 menu1.show(event, this);
             });
-            $(".video_display").on('click touchend', function(event) {
+            $(document).on('click touchend', function(event) {
                 if (!$(event.target).closest('#target').length) {
                     event.stopPropagation();
                 }

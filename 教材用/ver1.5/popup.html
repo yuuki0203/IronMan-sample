@@ -105,11 +105,11 @@
     <script>
         var play = $('.play_area');
         play.addClass('d-none')
-        $('.video_display').click(function(){
+        /*$('.video_display').click(function(){
             if (play.hasClass('d-none')){
                 play.removeClass('d-none');
             }
-        })
+        })*/
         $('.video_all_play').click(function(){
             if (play.hasClass('d-none')){
                 play.removeClass('d-none');
@@ -127,7 +127,7 @@
                     "action" : function(){ alert("ふが！"); } 
                 }
             ]);
-            $("#id_div1").click(function(event){
+            $(".video_display").click(function(event){
                 menu1.show(event, this);
             });
         });

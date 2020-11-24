@@ -20,7 +20,7 @@
         <a>
             <div class="media mt-3 mb-2">
                 <p><span>加藤：</span>今、太田さんから電話があったんだけど、まだ企画案が届いてない
-                    <span id="id_div1" class="media-body video_display" role="button">そうだ</span>よ。</p>
+                    <span class="media-body video_display" role="button">そうだ</span>よ。</p>
             </div>
         </a>
         <a>
@@ -98,6 +98,12 @@
         <a href="http://ri.jwlc.jp/page/main.html" class="btn btn-outline-primary">戻る</a>
     </div>
 
+    <div id="pMENU" style="position:absolute;top:12px;left:0px;visibility:hidden;background-color:yellow;width:100px;">
+        <a href="http://www.yahoo.co.jp/"   >Yahoo</a><br>
+        <a href="http://www.infoseek.co.jp/">infoseek</a><br>
+        <a href="http://www.lycos.co.jp/"   >lycos</a><br>
+    </div>
+
     <script src="./jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="./bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
@@ -107,11 +113,9 @@
     <script>
         var play = $('.play_area');
         play.addClass('d-none')
-        /*$('.video_display').click(function(){
-            if (play.hasClass('d-none')){
-                play.removeClass('d-none');
-            }
-        })*/
+        $('.video_display').click(function(){
+            popupmenu;
+        })
         $('.video_all_play').click(function(){
             if (play.hasClass('d-none')){
                 play.removeClass('d-none');
@@ -120,7 +124,7 @@
         $('.video_hide_btn').click(function(){
             play.addClass('d-none');
         })
-        $(document).ready(function(){
+       /*$(document).ready(function(){
             var menu1 = new PopupMenu( $, [
                 { "title" : "hoge",
                     "action" : function(){ alert("hoge!"); } 
@@ -132,7 +136,14 @@
             $(".video_display").click(function(event){
                 menu1.show(event, this);
             });
-        });
+        });*/
+        flag = false;
+        function popupmenu()
+        {
+	        pMENU.style.left = event.x;
+	        pMENU.style.top  = event.y;
+	        if (flag) pMENU.style.visibility = "hidden"; else pMENU.style.visibility = "visible";
+	        flag = !flag;
+        }
     </script>
-
 </body></html>

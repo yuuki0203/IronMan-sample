@@ -18,7 +18,7 @@
     <div class="container page_area dialog_area">
         <a>
             <div class="media mt-3 mb-2">
-               <span>加藤：</span><p><span>今、太田さんから電話があったんだけど、まだ企画案が届<br>いてない</span>
+               <span>加藤：</span><p><span>今、太田さんから電話があったんだけど、まだ企画案が届いてない</span>
                 <a role="button" class="video_display"><span role="button" class="media-body">そうだ</span></a><a>よ。</a></p>
             </div>
         </a>
@@ -134,7 +134,7 @@
             $(".video_display").click(function(event) {
                     menu1.show(event, this);
             });
-            $(document).on('click touchend', function(event) {
+            $(document).on('click', function(event) {
                 if (!$(event.target).closest('#target').length) {
                     event.stopPropagation();
                 }

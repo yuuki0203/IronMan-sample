@@ -133,8 +133,10 @@
                     menu1.show(event, this);
                 }
             });
-            $(document).click(function(event){
-                event.stopPropagation();
+            $(document).on('click touchend', function(event) {
+                if (!$(event.target).closest('#target').length) {
+                    event.stopPropagation();
+                }
             });
         });
     </script>

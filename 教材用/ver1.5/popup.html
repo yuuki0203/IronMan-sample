@@ -134,7 +134,7 @@
             $(".video_display").click(function(event) {
                     menu1.show(event, this);
             });
-            $(document).on('click', function(event) {
+            $(".dialog_area").on('click', function(event) {
                 if (!$(event.target).closest('#target').length) {
                     event.stopPropagation();
                 }

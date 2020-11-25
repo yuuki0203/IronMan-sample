@@ -19,7 +19,7 @@
         <a>
             <div class="media mt-3 mb-2">
                 <p><span>加藤：</span>今、太田さんから電話があったんだけど、まだ企画案が届いてない
-                <a role="button" class="video_display"><span role="button" class="media-body video_display">そうだ</span></a><a>よ。</a></p>
+                <a role="button" class="video_display"><span role="button" class="media-body">そうだ</span></a><a>よ。</a></p>
             </div>
         </a>
         <a>
@@ -117,11 +117,17 @@
         })
        $(document).ready(function(){
             var menu1 = new PopupMenu( $, [
-                { "title" : "hoge",
-                    "action" : function(){ alert("hoge!"); } 
+                { "title" : "例文",
+                    "action" : function(){ alert("例文"); } 
                 }, 
-                { "title" : "ふが",
-                    "action" : function(){ alert("ふが！"); } 
+                { "title" : "解説",
+                    "action" : function(){ alert("解説"); } 
+                },
+                { "title" : "動画",
+                    "action" : function(){ alert("動画"); } 
+                }, 
+                { "title" : "問題",
+                    "action" : function(){ alert("問題"); } 
                 }
             ]);
 

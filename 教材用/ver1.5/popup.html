@@ -133,27 +133,28 @@
                     "action" : function(){event.stopPropagation();}
                 }
             ]);*/
-            var exa = ( $, [
+
+            var exa = new PopupMenu( $, [
                 { "title" : "例文",
                     "action" : function(){ alert("例文");}
                 }
             ]);
-            var prob = ( $, [
+            var prob = new PopupMenu( $, [
                 { "title" : "問題",
                     "action" : function(){ alert("問題");}
                 }
             ]);
-            var simi = ( $, [
+            var simi = new PopupMenu( $, [
                 { "title" : "類似項目",
                     "action" : function(){ alert("類似項目");}
                 }
             ]);
-            var cone = ( $, [
+            var cone = new PopupMenu( $, [
                 { "title" : "接続",
                     "action" : function(){ alert("接続");}
                 }
             ]);
-            var sound = ( $, [
+            var sound = new PopupMenu( $, [
                 { "title" : "🔊",
                     "action" : function(){ alert("再生します。");}
                 }

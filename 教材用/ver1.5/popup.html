@@ -102,6 +102,12 @@
     <script src="./popupmenu.js"></script>
     <!-- 画面JS -->
     <script>
+        var con1;
+        var con2;
+        var con3;
+        var con4;
+        var con5;
+
         var play = $('.play_area');
         play.addClass('d-none')
         /*$('.video_display').click(function(){
@@ -117,19 +123,19 @@
         })
        $(document).ready(function(){
             var menu1 = new PopupMenu( $, [
-                { "title" : "",
+                { "title" : con1,
                     "action" : function(){ alert(""); } 
                 }, 
-                { "title" : "",
+                { "title" : con2,
                     "action" : function(){ alert(""); } 
                 },
-                { "title" : "",
+                { "title" : con3,
                     "action" : function(){ alert(""); } 
                 }, 
-                { "title" : "",
+                { "title" : con4,
                     "action" : function(){ alert(""); } 
                 },
-                { "title" : "",
+                { "title" : con5,
                     "action" : function(){ alert("");}
                 },
                 { "title" : "閉じる",
@@ -171,6 +177,9 @@
                 if(!e.target.closest('.video_display')) {
                     menu1.hide();
                 } else {
+                    con1 = "類似項目"
+                    con2 = "問題"
+                    con3 = "接続"
                     menu1.show(e, this);
                 }
             });

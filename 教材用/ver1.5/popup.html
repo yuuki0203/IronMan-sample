@@ -108,6 +108,17 @@
         var con4 = "";
         var con5 = "";
 
+        document.addEventListener('click', (e) =>{
+            if(!e.target.closest('.video_display')) {
+                    menu1.hide();
+            } else {
+                con1 = "類似項目"
+                con2 = "問題"
+                con3 = "接続"
+                menu1.show(e, this);
+            }
+        });
+
         var play = $('.play_area');
         play.addClass('d-none')
         /*$('.video_display').click(function(){
@@ -142,16 +153,7 @@
                     "action" : function(){event.stopPropagation();}
                 }
             ]);
-            document.addEventListener('click', (e) =>{
-                if(!e.target.closest('.video_display')) {
-                    menu1.hide();
-                } else {
-                    con1 = "類似項目"
-                    con2 = "問題"
-                    con3 = "接続"
-                    menu1.show(e, this);
-                }
-            });
+            
             /*var exa = new PopupMenu( $, [
                 { "title" : "例文",
                     "action" : function(){ alert("例文");}

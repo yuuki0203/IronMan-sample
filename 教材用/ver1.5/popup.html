@@ -107,14 +107,43 @@
         var con3 = "";
         var con4 = "";
         var con5 = "";
-
+        var menu1 = new PopupMenu( $, [
+            { "title" : con1,
+                "action" : function(){ alert(""); } 
+            }, 
+            { "title" : con2,
+                "action" : function(){ alert(""); } 
+            },
+            { "title" : con3,
+                "action" : function(){ alert(""); } 
+            }, 
+            { "title" : con4,
+                "action" : function(){ alert(""); } 
+            },
+            { "title" : con5,
+                "action" : function(){ alert("");}
+            },
+            { "title" : "閉じる",
+                "action" : function(){event.stopPropagation();}
+            }
+        ]);
+        document.addEventListener('click', (e) =>{
+            if(!e.target.closest('.video_display')) {
+                menu1.hide();
+            } else {
+                con1 = "例文"
+                con2 = "問題"
+                con3 = "接続"
+                menu1.show(e, this);
+            }
+        });
         var play = $('.play_area');
         play.addClass('d-none')
-        $('.video_display').click(function(){
+        /*$('.video_display').click(function(){
             con1 = "例文"
             con2 = "問題"
             con3 = "接続"
-        });
+        });*/
         $('.video_all_play').click(function(){
             if (play.hasClass('d-none')){
                 play.removeClass('d-none');
@@ -125,33 +154,6 @@
         });
 
        $(document).ready(function(){
-            var menu1 = new PopupMenu( $, [
-                { "title" : con1,
-                    "action" : function(){ alert(""); } 
-                }, 
-                { "title" : con2,
-                    "action" : function(){ alert(""); } 
-                },
-                { "title" : con3,
-                    "action" : function(){ alert(""); } 
-                }, 
-                { "title" : con4,
-                    "action" : function(){ alert(""); } 
-                },
-                { "title" : con5,
-                    "action" : function(){ alert("");}
-                },
-                { "title" : "閉じる",
-                    "action" : function(){event.stopPropagation();}
-                }
-            ]);
-            document.addEventListener('click', (e) =>{
-                if(!e.target.closest('.video_display')) {
-                    menu1.hide();
-                } else {
-                    menu1.show(e, this);
-                }
-            });
             /*var exa = new PopupMenu( $, [
                 { "title" : "例文",
                     "action" : function(){ alert("例文");}

@@ -139,7 +139,7 @@
             });
             $(document).on('click', "dialog_area", function(event) {
                 if (!$(event.target).closest('#target').length) {
-                    event.stopPropagation();
+                    menu1.show(event, this);
                 }
             });
         });

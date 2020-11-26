@@ -139,7 +139,7 @@
             });*/
             document.addEventListener('click', (e) =>{
                 if(!e.target.closest('.video_display')) {
-                    event.stopPropagation();
+                    menu1.hide();
                 } else {
                     menu1.show(e, this);
                 }

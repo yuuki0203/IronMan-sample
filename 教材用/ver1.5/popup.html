@@ -116,7 +116,7 @@
             play.addClass('d-none');
         })
        $(document).ready(function(){
-            var menu1 = new PopupMenu( $, [
+            /*var menu1 = new PopupMenu( $, [
                 { "title" : "例文",
                     "action" : function(){ alert("例文"); } 
                 }, 
@@ -132,7 +132,33 @@
                 { "title" : "閉じる",
                     "action" : function(){event.stopPropagation();}
                 }
+            ]);*/
+            var exa = ( $, [
+                { "title" : "例文",
+                    "action" : function(){ alert("例文");}
+                }
             ]);
+            var prob = ( $, [
+                { "title" : "問題",
+                    "action" : function(){ alert("問題");}
+                }
+            ]);
+            var simi = ( $, [
+                { "title" : "類似項目",
+                    "action" : function(){ alert("類似項目");}
+                }
+            ]);
+            var cone = ( $, [
+                { "title" : "接続",
+                    "action" : function(){ alert("接続");}
+                }
+            ]);
+            var sound = ( $, [
+                { "title" : "🔊",
+                    "action" : function(){ alert("再生します。");}
+                }
+            ]);
+            var menu1 = new PopupMenu( $, [exa, prob, simi, cone, sound]);
 
             /*$(".video_display").click(function(event) {
                     menu1.show(event, this);

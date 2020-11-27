@@ -27,14 +27,14 @@
         <a>
             <div class="media mt-3 mb-2">
                <span>加藤：</span>
-               <p><span>今、太田さんから電話があったんだけど、まだ企画案が届いてない</span>
-                <a role="button" class="display1"><span role="button" class="media-body">そうだ</span></a><a>よ。</a></p>
+               <span>今、太田さんから電話があったんだけど、まだ企画案が届いてない</span>
+                <span role="button" class="media-body"><a role="button" class="display1">そうだ</a><a>よ。</a></span>
             </div>
         </a>
         <a>
             <div class="media mt-3 mb-2"> 
-                <p><span>李　：</span>変ですね。森さんがおととい送った
-                <a role="button" class="display2"><span class="media-body">はず</span></a><a>ですが。</a></p>
+                <span>李　：</span>変ですね。森さんがおととい送った
+                <span class="media-body"><a role="button" class="display2">はず</a><a>ですが。</a></span>
             </div>
         </a>
         <a role="button" class="video_display">
@@ -46,7 +46,7 @@
         <a>
             <div class="media mt-3 mb-2">
                 <span>森　：</span>
-                <span class="media-body"><a role="button" class="video_display">ええ？</a>おかしいな。そんなはずはないですよ。</span>
+                <span class="media-body"><a role="button" class="display3">ええ？</a><a>おかしいな。そんなはずはないですよ。</a></span>
             </div>
         </a>
         <a role="button" class="video_display">
@@ -61,28 +61,52 @@
                 <span class="media-body">いえ、自分で届けたんです。<br>西長安街の方へ行く用事があったので。</span>
             </div>
         </a>
-        <a role="button" class="video_display">
+        <a>
             <div class="media mt-3 mb-2">
                 <span>李　：</span>
-                <span class="media-body">じゃあ、太田さんに直接渡したんですか。</span>
+                <span class="media-body"><a role="button" class="display4">じゃあ</a><a>、太田さんに直接渡したんですか。</a></span>
             </div>
         </a>
-        <a role="button" class="video_display">
+        <a>
             <div class="media mt-3 mb-2">
                 <span>森　：</span>
-                <span class="media-body">いいえ、太田さんは外出中でしたから、会社の人に預けてきました。</span>
+                <span class="media-body"><a>いいえ、太田さんは外出中でしたから、会社の人</a>に<a role="button" class="display5">預けてきました。</a></span>
             </div>
         </a>
-        <a role="button" class="video_display">
+        <a>
             <div class="media mt-3 mb-2">
                 <span>太田：</span>
-                <span class="media-body">すみません、企画案、届いていました。<br>同僚が預かったままだったんです。</span>
+                <span class="media-body"><a role="button" class="display4">すみません</a><a>、企画案、届いていました。</a><br><a role="button" class="display4">同僚</a>が預かった<a role="button" class="display7">まま</a>だったんです。</span>
             </div>
         </a>
         <a role="button" class="video_display">
             <div class="media mt-3 mb-2">
                 <span>森　：</span>
                 <span class="media-body">そうだったんですか。よかったです。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>太田　：</span>
+                <span class="media-body">せっかく来てくれたのに、留守にして、すみませんでした。</span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">いえ、こちらこそ。連絡もせずに、訪ねてしまって。</span>
+            </div>
+        </a>
+        <a>
+            <div class="media mt-3 mb-2">
+                <span>太田　：</span>
+                <span class="media-body">早速、企画案を検討してみます。<a role="button" class="display6">来週中</a><a>には、お返しできるはずです。</a></span>
+            </div>
+        </a>
+        <a role="button" class="video_display">
+            <div class="media mt-3 mb-2">
+                <span>森　：</span>
+                <span class="media-body">よろしくお願いします。</span>
             </div>
         </a>
     </div>
@@ -136,19 +160,79 @@
             var con3 = "類似項目";
             var con4 = "接続";
             var con5 = "🔊";
+            var con6 = "+α"
             var charcheck = 0;
 
             document.addEventListener('click', (e) =>{
-                if(!e.target.closest('.video_display')) {
+                if(!e.target.closest('display1', 'display2', 'display3', 'display4', 'display5', 'display6')) {
                     menu1.hide();
-                } else {
+                } 
+                else if(e.target.closest('display1')){
                     charcheck = 1;
+                    menu1.show(e, this);
+                }
+                else if(e.target.closest('display2')){
+                    charcheck = 2;
+                    menu1.show(e, this);
+                }
+                else if(e.target.closest('display3')){
+                    charcheck = 3;
+                    menu1.show(e, this);
+                }
+                else if(e.target.closest('display4')){
+                    charcheck = 4;
+                    menu1.show(e, this);
+                }
+                else if(e.target.closest('display5')){
+                    charcheck = 5;
+                    menu1.show(e, this);
+                }
+                else if(e.target.closest('display6')){
+                    charcheck = 6;
                     menu1.show(e, this);
                 }
             });
             if(charcheck = 1){
                 con1 = "";
                 con2 = "";
+                con6 = "";
+            }
+            else if(charcheck = 2){
+                con1 = "";
+                con3 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck = 3){
+                con2 = "";
+                con3 = "";
+                con4 = "";
+                con6 = "";
+            }
+            else if(charcheck = 4){
+                con1 = "";
+                con2 = "";
+                con3 = "";
+                con4 = "";
+                con5 = "";
+            }
+            else if(charcheck = 5){
+                con1 = "";
+                con4 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck = 6){
+                con3 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck = 7){
+                con1 = "";
+                con3 = "";
+                con4 = "";
+                con5 = "";
+                con6 = "";
             }
             var menu1 = new PopupMenu( $, [
                 { "title" : con1,

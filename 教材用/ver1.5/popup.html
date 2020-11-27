@@ -8,7 +8,7 @@
     <title>日本語教材アプリ｜応用文</title>
     <style>
         .Nextpage {
-            display: none;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -146,7 +146,7 @@
                 { "title" : con1,
                     "action" : function(){ 
                         var elm = document.getElementById('Nextpage')
-                        elm.visibility = visible;
+                        elm.style.visibility = 'visible'
                         } 
                 }, 
                 { "title" : con2,

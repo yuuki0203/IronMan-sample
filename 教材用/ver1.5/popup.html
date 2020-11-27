@@ -129,7 +129,6 @@
                 if(!e.target.closest('.video_display')) {
                     menu1.hide();
                 } else {
-                    menu1.con1 = "例文"
                     con1 = "例文"
                     con2 = "問題"
                     con3 = "接続"
@@ -137,7 +136,7 @@
                     menu1.show(e, this);
                 }
             });
-            var menu1 = new PopupMenu( $, [
+            /*var menu1 = new PopupMenu( $, [
                 { "title" : con1,
                     "action" : function(){ alert(""); } 
                 }, 
@@ -156,7 +155,9 @@
                 { "title" : "閉じる",
                     "action" : function(){event.stopPropagation();}
                 }
-            ]);
+            ]);*/
+
+            var menu1 = new PopupMenu( $, [con1,con2,con3,con4,con5]);
 
             /*var exa = new PopupMenu( $, [
                 { "title" : "例文",
@@ -182,8 +183,7 @@
                 { "title" : "🔊",
                     "action" : function(){ alert("再生します。");}
                 }
-            ]);
-            var menu1 = new PopupMenu( $, [exa, prob, simi, cone, sound]);*/
+            ]);*/
 
             /*$(".video_display").click(function(event) {
                     menu1.show(event, this);

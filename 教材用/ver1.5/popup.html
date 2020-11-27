@@ -147,7 +147,9 @@
                     "action" : function(){ 
                         var elm = document.getElementById('Nextpage')
                         elm.style.visibility = 'visible'
-                        } 
+                        elm.style.left = event.x;
+	                    elm.style.top  = event.y
+                    } 
                 }, 
                 { "title" : con2,
                     "action" : function(){ alert(""); } 

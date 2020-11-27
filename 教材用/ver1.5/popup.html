@@ -131,17 +131,20 @@
         });
 
        $(document).ready(function(){
-            var con1 = "";
+            /*var con1 = "例文";
             var con2 = "問題";
             var con3 = "類似項目";
             var con4 = "接続";
-            var con5 = "🔊";
+            var con5 = "🔊";*/
+
             document.addEventListener('click', (e) =>{
                 if(!e.target.closest('.video_display')) {
                     menu1.hide();
                 } else {
+                    var con3 = "類似項目";
+                    var con4 = "接続";
+                    var con5 = "🔊";
                     $('menu1').append(con1);
-                    //document.write(con1);
                     menu1.show(e, this);
                 }
             });

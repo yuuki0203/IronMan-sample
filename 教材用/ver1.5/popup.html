@@ -18,7 +18,8 @@
     <div class="container page_area dialog_area">
         <a>
             <div class="media mt-3 mb-2">
-               <span>加藤：</span><p><span>今、太田さんから電話があったんだけど、まだ企画案が届いてない</span>
+               <span>加藤：</span>
+               <p><span>今、太田さんから電話があったんだけど、まだ企画案が届いてない</span>
                 <a role="button" class="video_display"><span role="button" class="media-body">そうだ</span></a><a>よ。</a></p>
             </div>
         </a>
@@ -124,6 +125,17 @@
             var con3 = "";
             var con4 = "";
             var con5 = "";
+            document.addEventListener('click', (e) =>{
+                if(!e.target.closest('.video_display')) {
+                    menu1.hide();
+                } else {
+                    con1 = "例文"
+                    con2 = "問題"
+                    con3 = "接続"
+                    //document.write(con1);
+                    menu1.show(e, this);
+                }
+            });
             var menu1 = new PopupMenu( $, [
                 { "title" : con1,
                     "action" : function(){ alert(""); } 
@@ -144,17 +156,7 @@
                     "action" : function(){event.stopPropagation();}
                 }
             ]);
-            document.addEventListener('click', (e) =>{
-                if(!e.target.closest('.video_display')) {
-                menu1.hide();
-                } else {
-                    con1 = "例文"
-                    con2 = "問題"
-                    con3 = "接続"
-                    //document.write(con1);
-                    menu1.show(e, this);
-                }
-            ß});
+
             /*var exa = new PopupMenu( $, [
                 { "title" : "例文",
                     "action" : function(){ alert("例文");}

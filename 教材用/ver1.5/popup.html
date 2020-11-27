@@ -78,7 +78,7 @@
             </div>
         </a>
     </div>
-    <iframe src="./.html" width="600" height="100"></iframe>
+    <iframe id="Nextpage" src="./test.html" width="600" height="100" visibility="hidden"></iframe>
     <!-- video -->
     <div class="play_area d-none">
         <div class="text-right">
@@ -137,7 +137,10 @@
             });
             var menu1 = new PopupMenu( $, [
                 { "title" : con1,
-                    "action" : function(){ alert(""); } 
+                    "action" : function(){ 
+                        var elm = document.getElementById('Nextpage')
+                        elm.visibility = visible;
+                        } 
                 }, 
                 { "title" : con2,
                     "action" : function(){ alert(""); } 

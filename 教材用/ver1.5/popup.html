@@ -131,23 +131,25 @@
         });
 
        $(document).ready(function(){
-            /*var con1 = "例文";
+            var con1 = "例文";
             var con2 = "問題";
             var con3 = "類似項目";
             var con4 = "接続";
-            var con5 = "🔊";*/
+            var con5 = "🔊";
+            var charcheck = 0;
 
             document.addEventListener('click', (e) =>{
                 if(!e.target.closest('.video_display')) {
                     menu1.hide();
                 } else {
-                    var con3 = "類似項目";
-                    var con4 = "接続";
-                    var con5 = "🔊";
-                    $('menu1').append(con1);
+                    charcheck = 1;
                     menu1.show(e, this);
                 }
             });
+            if(charcheck = 1){
+                con1 = "";
+                con2 = "";
+            }
             var menu1 = new PopupMenu( $, [
                 { "title" : con1,
                     "action" : function(){ 

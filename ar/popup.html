@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://ri.jwlc.jp/page/dialog.html -->
+<html lang="jp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>日本語教材アプリ｜応用文</title>
+</head>
+<body>
+    <div class="bg_pattern"></div>
+    <div class="mx-5 mt-3">
+        <div class="text-center">
+            <h4>第一課　応用文</h4>
+        </div>
+    </div>
+    <div class="container page_area dialog_area">
+            <div class="media mt-3 mb-2">
+               <span><a>加藤：</a><a role="button" class="fade_in_out_check" id="sentence1" onclick="getId(this);">①</a></span>
+               <span class="media-body"><a>今、太田さんから電話があったんだけど、まだ企画案が届いてない</a>
+               <a role="button" class="display1" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">そうだ</a><a>よ。</a></span>
+            </div>
+            <div class="media mt-3 mb-2"> 
+                <span><a>李　：</a><a role="button" class="fade_in_out_check" id="sentence2" onclick="getId(this);">②</a></span>
+                <span class="media-body"><a>変ですね。森さんがおととい送った</a>
+                <a role="button" class="display2" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">はず</a><a>ですが。</a></span>
+            </div>
+        <!--<a>
+            <div class="media mt-3 mb-2">
+                <p>-------</p>
+            </div>
+        </a>-->
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence3" onclick="getId(this);">③</a></span>
+                <span class="media-body"><a role="button" class="display3" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">ええ？</a><a>おかしいな。そんなはずはないですよ。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>李　：</a><a role="button" class="fade_in_out_check" id="sentence4" onclick="getId(this);">④</a></span>
+                <span class="media-body"><a>そうですよね、おととい送ったんですものね。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence5" onclick="getId(this);">⑤</a></span>
+                <span class="media-body"><a>いえ、自分で届けたんです。<br>西長安街の方へ行く用事があったので。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>李　：</a><a role="button" class="fade_in_out_check" id="sentence6" onclick="getId(this);">⑥</a></span>
+                <span class="media-body"><a role="button" class="display4" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">じゃあ</a><a>、太田さんに直接渡したんですか。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence7" onclick="getId(this);">⑦</a></span>
+                <span class="media-body"><a>いいえ、太田さんは外出中でしたから、会社の人に</a><a role="button" class="display5" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">預けて</a><a>きました。</a></span>
+            </div>
+        <!--<a>
+            <div class="media mt-3 mb-2">
+                <p>-------</p>
+            </div>
+        </a>-->
+            <div class="media mt-3 mb-2">
+                <span><a>太田：</a><a role="button" class="fade_in_out_check" id="sentence8" onclick="getId(this);">⑧</a></span>
+                    <span class="media-body"><a role="button" class="display6" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">すみません。</a>
+                    <a>企画案、届いていました。</a>
+                    <a role="button" class="display7" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">同僚</a>
+                    <a>が預かった</a>
+                    <a role="button" class="display8" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">まま</a>
+                    <a>だったんです。</a>
+                </span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence9" onclick="getId(this);">⑨</a></span>
+                <span class="media-body"><a>そうだったんですか。よかったです。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>太田：</a><a role="button" class="fade_in_out_check" id="sentence10" onclick="getId(this);">⑩</a></span>
+                <span class="media-body"><a>せっかく来てくれたのに、留守にして、すみませんでした。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence11" onclick="getId(this);">⑪</a></span>
+                <span class="media-body"><a>いえ、こちらこそ。連絡もせずに、訪ねてしまって。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>太田：</a><a role="button" class="fade_in_out_check" id="sentence12" onclick="getId(this);">⑫</a></span>
+                <span class="media-body"><a>早速、企画案を検討してみます。</a><a role="button" class="display9" style="border-bottom: dashed 3px rgba(246, 197, 85, .9);">来週中</a><a>には、お返しできるはずです。</a></span>
+            </div>
+            <div class="media mt-3 mb-2">
+                <span><a>森　：</a><a role="button" class="fade_in_out_check" id="sentence13" onclick="getId(this);">⑬</a></span>
+                <span class="media-body"><a>よろしくお願いします。</a></span>
+            </div>
+    </div>
+    
+    <!-- modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="mymodal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bmd-modalContent">
+                <div class="modal-body">
+                    <div class="close-button">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/cMNPPgB0_mU" height="360" width="640"></iframe>
+                    </div>
+                </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="Qmodal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">問題</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div><!-- /.modal-header -->
+                <div class="modal-body">
+                    <p class="modal-question" id="modal-body">サンプル</p>
+                    <img class="modal-image" id="modal-image" src="">
+                </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="stmodal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <p class="modal-question" id="modal-sentence">サンプル</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div><!-- /.modal-header -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!--menu-->
+    <div class="pie pie1" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color1" onclick="location.href='./menu_new.html'">
+          <img class="card1" src="/image/home.svg" alt="onclick">
+        </div>
+      </div>
+
+    <div class="pie pie2" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color2" onclick="location.href='./slide_menu.html'">
+          <img class="discount" src="/image/book.svg" alt="onclick">
+        </div>
+    </div>
+    <div class="pie pie3" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color3">
+          <img class="cart1" src="/image/setting.svg" alt="onclick">
+        </div>
+    </div>
+    <div class="menu" onclick="document.body.classList.toggle('active')">
+        <svg class="hamburger" xmlns="" width="100" height="100" viewBox="0 0 100 100">
+          <g
+             fill="none"
+             stroke="#000"
+             stroke-width="7.999"
+             stroke-linecap="round"
+           >
+           <path d="M 55,26.000284 L 24.056276,25.999716"/>
+           <path d="M 24.056276,49.999716 L 75.943724,50.000284"/>
+           <path d="M 45,73.999716 L 75.943724,74.000284"/>
+           <path d="M 75.943724,26.000284 L 45,25.999716"/>
+           <path d="M 24.056276,73.999716 L 55,74.000284"/>
+          </g>
+        </svg>
+    </div>
+
+    <!-- back btn -->
+    <div class="back_btn text-center mb-5">
+        <a href='./slide_menu.html' class="btn btn-outline-primary">戻る</a>
+    </div>
+
+
+    <script src="./jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="./bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="./popupmenu.js"></script>
+
+
+    <!-- 画面JS -->
+    <script>
+        var charcheck = 0;
+        var acheck = 0;
+        var id_value;
+        var menu1;
+
+        document.addEventListener('click', (e) =>{
+            if(!e.target.closest('.display1') && !e.target.closest('.display2') && !e.target.closest('.display3') && !e.target.closest('.display4') && !e.target.closest('.display5') && !e.target.closest('.display6') && !e.target.closest('.display7') && !e.target.closest('.display8') && !e.target.closest('.display9')) {
+                menu1.hide();
+            } else if (e.target.closest('.display1')){
+                charcheck = 1;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display2')){
+                charcheck = 2;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display3')){
+                charcheck = 3;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display4')){
+                charcheck = 4;
+                acheck = 1;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display5')){
+                charcheck = 5;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display6')){
+                charcheck = 4;
+                acheck = 2;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display7')){
+                charcheck = 4;
+                acheck = 3;
+                setPopup();
+                menu1.show(e, this);
+            } else if (e.target.closest('.display8')){
+                charcheck = 7;
+                setPopup();
+                menu1.show(e, this);
+            }else if (e.target.closest('.display9')){
+                charcheck = 6;
+                setPopup();
+                menu1.show(e, this);
+            }else if (e.target.closest('.Nextpage')){
+                var elm = document.getElementById('Nextpage')
+                elm.style.visibility = 'hidden'
+            }
+            //document.write(charcheck);
+        });
+
+        function setPopup(){
+            var con1 = "例文";
+            var con2 = "問題";
+            var con3 = "類似項目";
+            var con4 = "接続";
+            var con5 = "🔊";
+            var con6 = "+α"
+
+            if(charcheck == 1){
+                con1 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck == 2){
+                con1 = "";
+                con3 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck == 3){
+                con2 = "";
+                con3 = "";
+                con4 = "";
+                con6 = "";
+            }
+            else if(charcheck == 4){
+                con1 = "";
+                con2 = "";
+                con3 = "";
+                con4 = "";
+                con5 = "";
+            }
+            else if(charcheck == 5){
+                con1 = "";
+                con4 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck == 6){
+                con1 = "";
+                con3 = "";
+                con4 = "";
+                con5 = "";
+                con6 = "";
+            }
+            else if(charcheck == 7){
+                con3 = "";
+                con5 = "";
+                con6 = "";
+            }
+
+            var title = document.getElementById("modal-title");
+            var question = document.getElementById("modal-body");
+            var image = document.getElementById("modal-image");
+            title.innerHTML = "";
+            question.innerHTML = "";
+            image.setAttribute('src', '');
+            menu1 = new PopupMenu( $, [
+                { "title" : con1,
+                    "action" : function(){
+                        if(charcheck == 3){
+                            $('#mymodal').modal();
+                        }
+                        else if(charcheck == 7){
+                            title.innerHTML = "例文「まま」"
+                            question.innerHTML = "・窓を開けたまま出かけてしまった。" + "<br/>" + "・コンタクトレンズをつけたまま寝ないほうがいいですよ。"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                    }
+                }, 
+                { "title" : con2,
+                    "action" : function(){
+                        if(charcheck == 1){
+                            title.innerHTML = "下の文章を読んで「そうだ」の文を作りなさい"
+                            question.innerHTML = "はなこの休日" + "<br/>" + "私は昨日から実家に帰っています。私の実家は三鷹です。田舎ではないですが、静かな街です。" + "<br/>" + "今一人で住んでいる家から実家まで電車で1時間ちょっとかかります。" + "<br/>" + "家には飼い犬のワンタロウがいます。ワンタロウはオスの柴犬です。私が10年前に保護しました。" + "<br/>" + "もう10歳ですがとても元気です。だから実家に帰ったらジジとたくさん遊べるので嬉しいです。"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 2){
+                            title.innerHTML = "(　　)に はず/べき/わけ を入れよ"
+                            question.innerHTML = "たくさん勉強したから試験に合格する(　　)だ。"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 5){
+                            title.innerHTML = "(　　)に当てはまる言葉はどちらか答えよ"
+                            question.innerHTML = "コートはクロークに(預けて/預かって)ください。" 
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 6){
+                            title.innerHTML = "今日が8月3日とすると(　　)に当てはまる言葉を答えよ"　
+                            question.innerHTML = "来週中に返事　→　8月(　)に返事が来る。" + "<br/>" + "来週までに返事　→　8月(　)に返事が来る。"
+                            image.setAttribute('src', 'Calender.png');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 7){
+                            title.innerHTML = "下線の動詞を変化させ、(　　)内に まま/ながら を入れよ"
+                            question.innerHTML = "立つ(　　)ご飯を食べる。"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                    }
+                },
+                { "title" : con3,
+                "action" : function(){
+                        if(charcheck == 1){
+                            title.innerHTML = "そうだ/ようだ"
+                            question.innerHTML = "";
+                            image.setAttribute('src', 'ruiji1-1.png')
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 5){
+                            title.innerHTML = "預ける⇔預かる"
+                            question,innerHTML = "";
+                            image.setAttribute('src', 'ruiji2.png')
+                            $('#Qmodal').modal();
+                        }
+                    }
+                }, 
+                { "title" : con4,
+                "action" : function(){
+                        if(charcheck == 1){
+                            title.innerHTML = "普通形＋そうだ"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 2){
+                            title.innerHTML= "二类形容詞＋な＋はず" + "<br/>" + "名詞＋の＋はず"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(charcheck == 7){
+                            title.innerHTML= "Vた＋まま"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                    } 
+                },
+                { "title" : con5,
+                "action" : function(){
+                    $('#mymodal').modal();
+                    }
+                },
+                { "title" : con6,
+                "action" : function(){
+                        if(acheck == 1){
+                            title.innerHTML = "挨拶の語源"
+                            question.innerHTML = "じゃあまた明日ね" + "<br/>" + "じゃあまたあとでね" + "<br/>" + "→じゃあね" + "<br/>" + "<br/>" + "こんにち（今日）はいいお天気ですね" + "<br/>" + "こんにちはご機嫌いかがですか" + "<br/>" + "→こんにちは"　+ "<br/>" + "<br/>" + "然様ならば、お別れですね" + "<br/>" + "然様ならば、またお会いしましょう" + "<br/>" + "→さようなら"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(acheck == 2){
+                            title.innerHTML = "すみませんってなに！？"
+                            question.innerHTML = "不好意思？谢谢？请问？" + "<br/>" + "<br/>" + "・こんなにお土産いただいちゃって、すみません。" + "<br/>" + "・すみません、ペンを貸してもらえませんか。" + "<br/>" + "・遅くなってすみません。"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                        else if(acheck == 3){
+                            title.innerHTML = "会社の役職名"
+                            question.innerHTML = "・代表取締役社長" + "<br/>" + "・専務取締役" + "<br/>" + "・常務取締役" + "<br/>" + "・本部長" + "<br/>" + "・部長" + "<br/>" + "・次長" + "<br/>" + "・課長" + "<br/>" + "・係長"
+                            image.setAttribute('src', '');
+                            $('#Qmodal').modal();
+                        }
+                    }
+                }
+            ]);
+        }
+        function getId(ele){
+            id_value = ele.id;
+        }
+        //クリックイベントが発火した
+        $('.fade_in_out_check').on('click', function(){
+            var check = document.getElementById(id_value)
+            var sentence = document.getElementById("modal-sentence")
+            //document.write(check.innerHTML);
+            if (check.innerHTML == "①"){
+                sentence.innerHTML = "加藤：①今、太田さんから電話があったんだけどまだ企画案が届いてないそうだよ。"
+            }
+            else if(check.innerHTML == "②"){
+                sentence.innerHTML = "李　：②変ですね。森さんがおととい送ったはずですが。"
+            }
+            else if(check.innerHTML == "③"){
+                sentence.innerHTML = "森　：③ええ？おかしいな。そんなはずはないですよ。"
+            }
+            else if(check.innerHTML == "④"){
+                sentence.innerHTML = "李　：④そうですよね。おととい送ったんですものね。"
+            }
+            else if(check.innerHTML == "⑤"){
+                sentence.innerHTML = "森　：⑤いえ、自分で届けたんです。西長安街の方へ行く用事があったので。"
+            }
+            else if(check.innerHTML == "⑥"){
+                sentence.innerHTML = "李　：⑥じゃあ、太田さんに直接渡したんですか。"
+            }
+            else if(check.innerHTML == "⑦"){
+                sentence.innerHTML = "森　：⑦いいえ、太田さんは外出中でしたから、会社の人に預けてきました。"
+            }
+            else if(check.innerHTML == "⑧"){
+                sentence.innerHTML = "太田：⑧すみません。企画案、届いていました。同僚が預かったままだったんです。"
+            }
+            else if(check.innerHTML == "⑨"){
+                sentence.innerHTML = "森　：⑨そうだったんですか。よかったです。"
+            }
+            else if(check.innerHTML == "⑩"){
+                sentence.innerHTML = "太田：⑩せっかく来てくれたのに、留守にして、すみませんでした。"
+            }
+            else if(check.innerHTML == "⑪"){
+                sentence.innerHTML = "森　：⑪いえ、こちらこそ。連絡もせずに、訪ねてしまって。"
+            }
+            else if(check.innerHTML == "⑫"){
+                sentence.innerHTML = "太田：⑫早速、企画案を検討してみます。来週中には、お返しできるはずです。"
+            }
+            else if(check.innerHTML == "⑬"){
+                sentence.innerHTML = "森　：⑬よろしくお願いします。"
+            }
+            $('#stmodal').modal();
+        });
+    </script>
+</body></html>

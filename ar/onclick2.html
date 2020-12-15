@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./onclick2.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   
+    <title>日本語</title>
+  </head>
+
+  <body class="whole">
+  <div class="mx-mt-3">
+    <h4 class="text-center">同漢字異義語</h>
+  </div>
+  
+    <div class="overlap">
+        <div class="onClickTextOverImage" id="onClickTextOverImage">
+              <h2 id="lettertxt" style="margin-top: 75px; font-size: 50px;">手紙</h2>
+            <div class="image">
+              <img src="./image/letter2.jpg" class="fullimage" id="letter">
+            </div>
+        </div>
+        <!--<div class="onClickTextOverImage">
+              <h2 style="margin-top: 75px;">可憐</h2>
+            <div class="image"> 
+              <img src="./image/karen2.jpg" class="fullimage">
+            </div>   
+        </div>
+        <div class="onClickTextOverImage">
+          <h2 style="margin-top: 75px;">汽車</h2>
+        <div class="image"> 
+          <img src="./image/train.png" class="fullimage">
+        </div>
+
+        <div class="onClickTextOverImage">
+          <h2 style="margin-top: 75px;">愛人</h2>
+        <div class="image"> 
+          <img src="./image/aijin.png" class="fullimage">
+        </div>-->
+        <table>
+          <tr>
+            <td><button type="button" id="before" onclick="onNext(this)">前へ</button></td>
+            <td><button type="button" id="next" onclick="onNext(this)">次へ</button></td>
+          </tr>
+        </table>
+    </div>
+
+
+
+    <div class="pie pie1" onclick="document.body.classList.remove('active')">
+      <div class="pie-color pie-color1" onclick="location.href='./menu_new.html'">
+        <img class="card1" src="/image/home.svg" alt="onclick">
+      </div>
+    </div>
+
+  <div class="pie pie2" onclick="document.body.classList.remove('active')">
+      <div class="pie-color pie-color2" onclick="location.href='./slide_menu.html'">
+        <img class="discount" src="/image/book.svg" alt="onclick">
+      </div>
+  </div>
+  <div class="pie pie3" onclick="document.body.classList.remove('active')">
+      <div class="pie-color pie-color3">
+        <img class="cart1" src="/image/setting.svg" alt="onclick">
+      </div>
+  </div>
+  <div class="menu" onclick="document.body.classList.toggle('active')">
+      <svg class="hamburger" xmlns="" width="100" height="100" viewBox="0 0 100 100">
+        <g
+           fill="none"
+           stroke="#000"
+           stroke-width="7.999"
+           stroke-linecap="round"
+         >
+         <path d="M 55,26.000284 L 24.056276,25.999716"/>
+         <path d="M 24.056276,49.999716 L 75.943724,50.000284"/>
+         <path d="M 45,73.999716 L 75.943724,74.000284"/>
+         <path d="M 75.943724,26.000284 L 45,25.999716"/>
+         <path d="M 24.056276,73.999716 L 55,74.000284"/>
+        </g>
+      </svg>
+  </div>
+
+  <!-- back btn -->
+  <div class="back_btn text-center mb-5">
+    <a href='./slide_menu.html' class="btn btn-outline-primary">戻る</a>
+  </div>
+<!-- SET Bootstrap4 JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+var count = 0;
+var textOverImages = document.getElementsByClassName("onClickTextOverImage");
+var Textover = document.getElementById("Textover");
+var lettertxt = document.getElementById('lettertxt');
+var letterimg = document.getElementById('letter');
+var classes = textOverImages[0].classList;
+var previousTextOverImage;
+
+for (var i = 0; i < textOverImages.length; i++) {
+  textOverImages[i].onclick = function() {
+    letterimg.style.visibility = 'visible'
+    classes = this.classList;
+    if (classes.contains("show")) {
+      classes.remove("show");
+    } else {
+      if (previousTextOverImage != null)
+        previousTextOverImage.classList.remove("show");
+      previousTextOverImage = this;
+      classes.add("show");
+    }
+  }
+}
+
+function onNext(elm){
+  var pushbtn = elm.id;
+  if (classes.contains("show")) {
+    letterimg.style.visibility = 'hidden';
+    classes.remove("show");
+  }
+  if(!classes.contains("show")){
+    if(pushbtn == "next"){
+      if(count == 0){
+        lettertxt.innerHTML = "可憐";
+        letterimg.setAttribute('src', 'image/karen2.jpg');
+        count = count + 1;
+      }
+      else if(count == 1){
+        lettertxt.innerHTML = "汽車";
+        letterimg.setAttribute('src', 'image/train.png');
+        count = count + 1;
+      }
+      else if(count == 2){
+        lettertxt.innerHTML = "愛人";
+        letterimg.setAttribute('src', 'image/aijin.png');
+        count = count + 1;
+      }
+    }
+    else if(pushbtn == "before"){
+      if(count == 3){
+        lettertxt.innerHTML = "汽車";
+        letterimg.setAttribute('src', 'image/train.png');
+        count = count - 1;
+      }
+      else if(count == 2){
+        lettertxt.innerHTML = "可憐";
+        letterimg.setAttribute('src', 'image/karen2.jpg');
+        count = count - 1;
+      }
+      else if(count == 1){
+        lettertxt.innerHTML = "手紙";
+        letterimg.setAttribute('src', 'image/letter2.jpg');
+        count = count - 1;
+      }
+    }
+  }
+}
+  </script>
+</body>

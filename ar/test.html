@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./test.css">
+  <title>Test</title>
+</head>
+<body>
+    <div class="mx-5 mt-3">
+        <div class="text-center">
+            <h4>テスト</h4>
+        </div>
+    </div>
+    <div class="container page_area">
+        <div class="timer container">
+            <img src="watch.png" alt="">
+            <p class="counttime" id="counttime">5</p>
+        </div>
+        <div class="result">
+            <p class="resulttxt" id="resulttxt" style="font-size: 26px;">4問中○問正解です！</p>
+        </div>
+        <img class="test-image" id="test-image" src="./start.png">
+        <button class="button" id="buttonA" type="button" name="maru" onclick="result(this)">
+            <p id="btA" style="font-size: 25px;">START</p>
+        </button>
+        <button class="button" id="buttonB" type="button" name="maru" onclick="result(this)">
+            <p id="btB" style="font-size: 25px;">BACK</p>
+        </button>
+    </div>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="Amodal" onclick="next()">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content" style="pointer-events: none;">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <p id="modal-sentence">正解</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div><!-- /.modal-header -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="mismodal" onclick="next()">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content" style="pointer-events: none;">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <p id="modal-sentence">不正解</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div><!-- /.modal-header -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="pie pie1" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color1" onclick="location.href='./menu_new.html'">
+          <img class="card1" src="/image/home.svg" alt="onclick">
+        </div>
+      </div>
+
+    <div class="pie pie2" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color2" onclick="location.href='./slide_menu.html'">
+          <img class="discount" src="/image/book.svg" alt="onclick">
+        </div>
+    </div>
+    <div class="pie pie3" onclick="document.body.classList.remove('active')">
+        <div class="pie-color pie-color3">
+          <img class="cart1" src="/image/setting.svg" alt="onclick">
+        </div>
+    </div>
+    <div class="menu" onclick="document.body.classList.toggle('active');">
+        <svg class="hamburger" xmlns="" width="100" height="100" viewBox="0 0 100 100">
+          <g
+             fill="none"
+             stroke="#000"
+             stroke-width="7.999"
+             stroke-linecap="round"
+           >
+           <path d="M 55,26.000284 L 24.056276,25.999716"/>
+           <path d="M 24.056276,49.999716 L 75.943724,50.000284"/>
+           <path d="M 45,73.999716 L 75.943724,74.000284"/>
+           <path d="M 75.943724,26.000284 L 45,25.999716"/>
+           <path d="M 24.056276,73.999716 L 55,74.000284"/>
+          </g>
+        </svg>
+    </div>
+
+    <script src="./jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="./bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <script>
+        var testnum = 0;
+        var quenum = 0;
+        var value;
+        var count = 5;
+        var id;
+        var okcount = 0;
+        var misque = [];
+        var misqbtn = [];
+        var misnum = 0;
+        var miscount = 0;
+        var retest = false;
+
+        var counttime = document.getElementById("counttime");
+        var countdown = function(){
+            counttime.innerHTML = count--;
+            id = setTimeout(countdown, 1000);
+            if(count < 0){　
+                clearTimeout(id);　//idをclearTimeoutで指定している
+                $('#mismodal').modal();
+                var img = document.getElementById('test-image');
+                var imgname = img.getAttribute('src');
+                var btA = document.getElementById('btA');
+                var btB = document.getElementById('btB');
+                misque[misnum] = imgname.slice(6, 8);
+                misqbtn[misnum] = [[btA.innerHTML], [btB.innerHTML]];
+                value = imgname.slice(6,7);
+                misnum++;
+                //document.write(value);
+            }
+        }
+
+        function result(ele){
+            value = ele.id.slice(-1);
+
+            if(testnum == 0){
+                if(value == "A"){
+                    testnum = 1;
+                    var img = document.getElementById('test-image');
+                    var btA = document.getElementById('btA');
+                    var btB = document.getElementById('btB');
+                    btA.innerHTML = "ごひゃくさんじゅう"
+                    btB.innerHTML = "ごひゃくさん"
+                    img.setAttribute('src', './testA1.png');
+                    countdown();
+                }
+                else if(value == "B"){
+                    window.history.back(-1);
+                }
+            }
+            else if(testnum <= 4){
+                var Qimage = document.getElementById("test-image").getAttribute('src');
+                var answer = Qimage.slice(6,7);
+                //document.write(value);
+                if (value == answer){
+                    clearTimeout(id);
+                    okcount++;
+                    $('#Amodal').modal();
+                }
+                else {
+                    clearTimeout(id);
+                    $('#mismodal').modal();
+                    var img = document.getElementById('test-image');
+                    var imgname = img.getAttribute('src');
+                    var btA = document.getElementById('btA');
+                    var btB = document.getElementById('btB');
+                    misque[misnum] = imgname.slice(6, 8);
+                    misqbtn[misnum] = [[btA.innerHTML], [btB.innerHTML]];
+                    value = imgname.slice(6, 7);
+                    misnum++;
+                }
+            }
+            else{
+                if(value == "A"){
+                    location.reload(true);
+                }
+                else if(value == "B"){
+                    var restxt = document.getElementById('resulttxt');
+                    restxt.style.visibility = "hidden"
+                    retest = true;
+                    miscount = misque.length;
+                    var img = document.getElementById('test-image');
+                    var btA = document.getElementById('btA');
+                    var btB = document.getElementById('btB');
+                    img.setAttribute('src', './test' + misque[0] + '.png')
+                    testnum = misque[0].slice(1);
+                    quenum = 1;
+                    btA.innerHTML = misqbtn[0][0];
+                    btB.innerHTML = misqbtn[0][1];
+                    countdown();
+                    //document.write(misqbtn);
+                }
+            }
+        }
+        
+        function next(){
+            if(retest == false){
+                testnum++;
+                var img = document.getElementById('test-image');
+                var btA = document.getElementById('btA');
+                var btB = document.getElementById('btB');
+                if(testnum == 2){
+                    img.setAttribute('src', './testB'+ testnum + '.png');
+                    btA.innerHTML = "に"
+                    btB.innerHTML = "の"
+                    count = 5;
+                    countdown();
+                }
+                else if(testnum == 3){
+                    img.setAttribute('src', './testB' + testnum + '.png')
+                    btA.innerHTML = "①"
+                    btB.innerHTML = "②"
+                    count = 5;
+                    countdown();
+                }
+                else if(testnum == 4){
+                    img.setAttribute('src', './testA' + testnum + '.png')
+                    btA.innerHTML = "なんこ"
+                    btB.innerHTML = "なにこ"
+                    count = 5;
+                    countdown();
+                }
+                else if (testnum > 4){
+                    count = 5;
+                    var restxt = document.getElementById('resulttxt');
+                    img.setAttribute('src', './end.png');
+                    restxt.innerHTML = "4問中" + okcount + "問正解！"
+                    restxt.style.visibility = "visible"
+                    btA.innerHTML = "終了する"
+                    btB.innerHTML = "間違えた問題をやり直す"
+                }
+            }
+            else if(retest == true){
+                var img = document.getElementById('test-image');
+                var btA = document.getElementById('btA');
+                var btB = document.getElementById('btB');
+                var buttonB = document.getElementById('buttonB');
+                if(quenum < miscount){
+                    var retestnum = misque[quenum];
+                    testnum = misque[quenum].slice(1)
+
+                    img.setAttribute('src', './test'+ retestnum + '.png');
+                    btA.innerHTML = misqbtn[quenum][0];
+                    btB.innerHTML = misqbtn[quenum][1];
+                    quenum++;
+                    count = 5;
+                    countdown();
+                }
+                else{
+                    count = 5;
+                    testnum = 5;
+                    img.setAttribute('src', './end.png');
+                    btA.innerHTML = "終了する";
+                    buttonB.style.visibility = 'hidden';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

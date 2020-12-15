@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./fade.css">
+</head>
+<body>
+  <style>
+    img{
+      display: block;
+    }
+    .testimg0{
+      position: absolute;
+      margin-left: 20px;
+      margin-right: auto;
+      margin-top: 30px;
+    }
+    .testimg1, .testimg2, .testimg3{
+      display: none;
+      position: absolute;
+      margin-left: 20px;
+      margin-right: auto;
+      margin-top: 30px;
+    }
+    .bar{
+      position: relative;
+      top: 420px;
+    }
+    .bar p{
+      font-size: 25px;
+    }
+  </style>
+
+  <div class="bg_pattern"></div>
+  <div class="mx-5 mt-3 text-center">
+      <h4>オリジナル</h4>
+  </div>
+  <div class="container page_area text-center">
+    <img class="testimg0 image_place" id="testimg0" src="./level0.png">
+    <img class="testimg1 image_place" id="testimg1" src="./level1.png">
+    <img class="testimg2 image_place" id="testimg2" src="./level2.png">
+    <img class="testimg3 image_place" id="testimg3" src="./level3.png">
+
+    <div class="bar text-center">
+      <input class="my-4 w-75" type="range" id="example" min="0" max="3" step="1" value="0">
+      <p>現在の辛さレベルは<span class="text-danger mx-2 h4" id="current-value">0</span>です</p>
+      <p class="text-danger"><span id="level-value">全然辛くありません</span></p>
+    </div>
+  </div>
+
+  <div class="pie pie1" onclick="document.body.classList.remove('active')">
+    <div class="pie-color pie-color1" onclick="location.href='./menu_new.html'">
+      <img class="card1" src="/image/home.svg" alt="onclick">
+    </div>
+  </div>
+  
+  <div class="pie pie2" onclick="document.body.classList.remove('active')">
+    <div class="pie-color pie-color2" onclick="location.href='./slide_menu.html'">
+      <img class="discount" src="/image/book.svg" alt="onclick">
+    </div>
+  </div>
+  <div class="pie pie3" onclick="document.body.classList.remove('active')">
+    <div class="pie-color pie-color3">
+      <img class="cart1" src="/image/setting.svg" alt="onclick">
+    </div>
+  </div>
+  <div class="menu" onclick="document.body.classList.toggle('active');">
+    <svg class="hamburger" xmlns="" width="100" height="100" viewBox="0 0 100 100">
+      <g fill="none" stroke="#000" stroke-width="7.999" stroke-linecap="round">
+        <path d="M 55,26.000284 L 24.056276,25.999716" />
+        <path d="M 24.056276,49.999716 L 75.943724,50.000284" />
+        <path d="M 45,73.999716 L 75.943724,74.000284" />
+        <path d="M 75.943724,26.000284 L 45,25.999716" />
+        <path d="M 24.056276,73.999716 L 55,74.000284" />
+      </g>
+    </svg>
+  </div>
+
+    <!-- back btn -->
+    <div class="back_btn text-center mb-5">
+      <a href='./slide_menu.html' class="btn btn-outline-primary">戻る</a>
+    </div>
+
+  <script src="./jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="./popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="./bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+  <script>
+    var level0 = document.getElementById('testimg0');
+    var level1 = document.getElementById('testimg1');
+    var level2 = document.getElementById('testimg2');
+    var level3 = document.getElementById('testimg3');
+    const inputElem = document.getElementById('example');
+    const currentValueElem = document.getElementById('current-value');
+    const levelvalue = document.getElementById('level-value')
+    const setCurrentValue = (val) => {
+      currentValueElem.innerText = val;
+      if (val == "0") {
+        levelvalue.innerText = "全然辛くありません"
+      }
+      else if (val == "1") {
+        levelvalue.innerText = "あまり辛くありません"
+      }
+      else if (val == "2") {
+        levelvalue.innerText = "少し/ちょっと辛いです"
+      }
+      else if (val == "3") {
+        levelvalue.innerText = "とても/たいへん辛いです"
+      }
+    }
+
+    const rangeOnChange = (e) => {
+      setCurrentValue(e.target.value);
+      changeimg();
+    }
+    window.onload = () => {
+      inputElem.addEventListener('input', rangeOnChange);
+      setCurrentValue(inputElem.value);
+    }
+
+    function changeimg(){
+      if(inputElem.value == 0){
+        $('#testimg0').fadeIn(800);
+        $('#testimg1').fadeOut(800);
+      }
+      if(inputElem.value == 1){
+        // 1.5秒かけてゆっくりフェードイン、フェードアウトさせる
+        $('#testimg1').fadeIn(800);
+        $('#testimg0').fadeOut(800);
+        $('#testimg2').fadeOut(800);
+      }
+      else if(inputElem.value == 2){
+        $('#testimg2').fadeIn(800);
+        $('#testimg1').fadeOut(800);
+        $('#testimg3').fadeOut(800)
+      }
+      else if(inputElem.value == 3){
+        $('#testimg3').fadeIn(800);
+        $('#testimg2').fadeOut(800);
+      }
+    }
+  </script>
+</body>
+</html>
